@@ -1,0 +1,21 @@
+<template>
+    <lightning-card>
+        <lightning-record-form
+        object-api-name ={objectApiName}
+        column="2"
+        layout-type="Full">
+    </lightning-record-form>
+    </lightning-card>
+
+        <lightning-card>
+            <p class = "part1">Your Account has been created</p>
+            <p class = "part2"> Now Click on Continue to explore</p>
+            <p class ="part3">
+                <lightning-button
+                label = "Continue"
+                variant="brand"
+                onclick= {handleWelcomeButton}>
+            </lightning-button>
+            </p>
+        </lightning-card>
+</template>
