@@ -1,0 +1,26 @@
+<template>
+    <div>
+        <lightning-card>
+            <lightning-combobox
+               name="Container"
+               label="Containers"
+               placeholder = "Select an container"
+               value = {value}
+               options = {Options}
+               onchange = {handleChange} >
+            </lightning-combobox>
+        </lightning-card>
+
+        <template if:true={cardVisible}>
+            <lightning-card title = "Datatable card">
+                <div style="height : 200px;">
+                    <lightning-datatable key-field="id" data={data}
+                    columns={columns}></lightning-datatable>
+                </div>
+            </lightning-card>
+        </template>
+
+
+
+    </div>
+</template>
