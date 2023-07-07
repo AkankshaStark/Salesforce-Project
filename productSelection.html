@@ -1,0 +1,29 @@
+<template>
+    <div>
+        <lightning-card>
+            <lightning-combobox
+               name="item"
+               label="Items"
+               placeholder = "Select an item"
+               value = {value}
+               options = {Options}
+               onchange = {handleChange} >
+            </lightning-combobox>
+        </lightning-card>
+
+        <template if:true={cardVisible}>
+            <lightning-card title = "Datatable card">
+                <div style="height : 200px;">
+                    <lightning-datatable key-field="id" data={data}
+                    columns={columns}></lightning-datatable>
+                </div>
+            </lightning-card>
+        </template>
+
+    <lightning-button
+    label = "Create a Case"
+    onclick = {handleBuyDetails}>
+</lightning-button>
+
+    </div>
+</template>
